@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Password Compliance Checker",
+  "version": "1.0",
+  "description": "Monitors password fields and checks compliance with security guidelines.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
